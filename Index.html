@@ -10,24 +10,27 @@
         h1 {
             margin-top: 20px;
         }
-        .platform-buttons {
+        .platform-container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            margin-top: 20px;
+            align-items: center;
+            height: 100vh;
         }
         .platform-button {
-            padding: 10px 20px;
+            width: 65%;
+            max-width: 300px; /* Defina a largura máxima desejada */
+            padding: 15px;
             margin: 10px;
+            border-radius: 30px; /* Botões arredondados */
+            background-color: #0073e6; /* Azul, cor do Facebook */
+            color: white;
+            font-weight: bold; /* Texto em negrito */
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .platform-button:hover {
-            opacity: 0.8;
-        }
-        #youtube-form,
-        #facebook-form,
-        #instagram-form {
-            display: none;
-            margin-top: 20px;
+            background-color: #005cbf; /* Cor de realce ao passar o mouse */
         }
         .input-container {
             text-align: center;
@@ -40,6 +43,7 @@
             padding: 10px 20px;
             background-color: #0073e6; /* Azul, cor do Facebook */
             color: white;
+            font-weight: bold; /* Texto em negrito */
             border: none;
             cursor: pointer;
         }
@@ -50,7 +54,7 @@
 </head>
 <body>
     <h1>Selecione a Plataforma</h1>
-    <div class="platform-buttons">
+    <div class="platform-container">
         <div class="platform-button" id="youtube-button" style="background-color: red;">
             YouTube
         </div>
@@ -60,24 +64,24 @@
         <div class="platform-button" id="instagram-button" style="background-color: #e1306c;">
             Instagram
         </div>
-    </div>
 
-    <!-- Formulário para YouTube -->
-    <div id="youtube-form" class="input-container">
-        <input type="text" placeholder="Cole o link do vídeo aqui">
-        <button class="download-button">Baixar Vídeo</button>
-    </div>
+        <!-- Formulário para YouTube -->
+        <div id="youtube-form" class="input-container">
+            <input type="text" placeholder="Cole o link do vídeo aqui">
+            <button class="download-button">Baixar Vídeo</button>
+        </div>
 
-    <!-- Formulário para Facebook -->
-    <div id="facebook-form" class="input-container">
-        <input type="text" placeholder="Cole o link do vídeo aqui">
-        <button class="download-button">Baixar Vídeo</button>
-    </div>
+        <!-- Formulário para Facebook -->
+        <div id="facebook-form" class="input-container">
+            <input type="text" placeholder="Cole o link do vídeo aqui">
+            <button class="download-button">Baixar Vídeo</button>
+        </div>
 
-    <!-- Formulário para Instagram -->
-    <div id="instagram-form" class="input-container">
-        <input type="text" placeholder="Cole o link do vídeo aqui">
-        <button class="download-button">Baixar Vídeo</button>
+        <!-- Formulário para Instagram -->
+        <div id="instagram-form" class="input-container">
+            <input type="text" placeholder="Cole o link do vídeo aqui">
+            <button class="download-button">Baixar Vídeo</button>
+        </div>
     </div>
 
     <script>
