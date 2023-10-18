@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selecione a Plataforma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .platform-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .platform-button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .platform-button:hover {
+            opacity: 0.8;
+        }
+        #youtube-form,
+        #facebook-form,
+        #instagram-form {
+            display: none;
+            margin-top: 20px;
+        }
+        .input-container {
+            text-align: center;
+        }
+        .input-container input[type="text"] {
+            width: 80%;
+            padding: 10px;
+        }
+        .download-button {
+            padding: 10px 20px;
+            background-color: #0073e6; /* Azul, cor do Facebook */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: #005cbf; /* Cor de realce ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1>Selecione a Plataforma</h1>
+    <div class="platform-buttons">
+        <div class="platform-button" id="youtube-button" style="background-color: red;">
+            YouTube
+        </div>
+        <div class="platform-button" id="facebook-button" style="background-color: #1877f2;">
+            Facebook
+        </div>
+        <div class="platform-button" id="instagram-button" style="background-color: #e1306c;">
+            Instagram
+        </div>
+    </div>
+
+    <!-- Formulário para YouTube -->
+    <div id="youtube-form" class="input-container">
+        <input type="text" placeholder="Cole o link do vídeo aqui">
+        <button class="download-button">Baixar Vídeo</button>
+    </div>
+
+    <!-- Formulário para Facebook -->
+    <div id="facebook-form" class="input-container">
+        <input type="text" placeholder="Cole o link do vídeo aqui">
+        <button class="download-button">Baixar Vídeo</button>
+    </div>
+
+    <!-- Formulário para Instagram -->
+    <div id="instagram-form" class="input-container">
+        <input type="text" placeholder="Cole o link do vídeo aqui">
+        <button class="download-button">Baixar Vídeo</button>
+    </div>
+
+    <script>
+        // Adiciona funcionalidade aos botões
+        const youtubeButton = document.getElementById('youtube-button');
+        const facebookButton = document.getElementById('facebook-button');
+        const instagramButton = document.getElementById('instagram-button');
+
+        youtubeButton.addEventListener('click', () => {
+            hideAllForms();
+            document.getElementById('youtube-form').style.display = 'block';
+        });
+
+        facebookButton.addEventListener('click', () => {
+            hideAllForms();
+            document.getElementById('facebook-form').style.display = 'block';
+        });
+
+        instagramButton.addEventListener('click', () => {
+            hideAllForms();
+            document.getElementById('instagram-form').style.display = 'block';
+        });
+
+        // Função para esconder todos os formulários
+        function hideAllForms() {
+            document.getElementById('youtube-form').style.display = 'none';
+            document.getElementById('facebook-form').style.display = 'none';
+            document.getElementById('instagram-form').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
