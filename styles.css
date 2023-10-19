@@ -54,3 +54,6 @@ h1 {
 .download-button:hover {
     background-color: #005cbf; /* Cor de realce ao passar o mouse */
 }
+.platform-button.clicked {
+    background-color: #005cbf; /* Cor de realce quando clicado */
+}
