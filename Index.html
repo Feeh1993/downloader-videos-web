@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Downloader Videos Web</title>
+    <title>Selecione a Plataforma</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <div class="platform-button" id="facebook-button" style="background-color: #1877f2;">
             Facebook
         </div>
-        <div class="platform-button" id="instagram-button" style="background-color: #e1306c;">
+        <div class="platform-button" id "instagram-button" style="background-color: #e1306c;">
             Instagram
         </div>
 
@@ -36,33 +36,6 @@
         </div>
     </div>
 
-    <script>
-        // Adiciona funcionalidade aos botões
-        const youtubeButton = document.getElementById('youtube-button');
-        const facebookButton = document.getElementById('facebook-button');
-        const instagramButton = document.getElementById('instagram-button');
-
-        youtubeButton.addEventListener('click', () => {
-            hideAllForms();
-            document.getElementById('youtube-form').style.display = 'block';
-        });
-
-        facebookButton.addEventListener('click', () => {
-            hideAllForms();
-            document.getElementById('facebook-form').style.display = 'block';
-        });
-
-        instagramButton.addEventListener('click', () => {
-            hideAllForms();
-            document.getElementById('instagram-form').style.display = 'block';
-        });
-
-        // Função para esconder todos os formulários
-        function hideAllForms() {
-            document.getElementById('youtube-form').style.display = 'none';
-            document.getElementById('facebook-form').style.display = 'none';
-            document.getElementById('instagram-form').style.display = 'none';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
